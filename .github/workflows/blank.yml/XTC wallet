@@ -1,0 +1,17 @@
+# Set XTC as the dfx cycle token
+dfx identity --network=ic set-wallet aanaa-xaaaa-aaaah-aaeiq-cai --force
+
+# Create a new dfx project
+dfx new example
+
+# move into the project directory
+cd example
+
+# install the node.js dependencies
+npm install
+
+# Create the empty canisters on mainnet
+dfx canister --network=ic create --all
+
+# Install the code into the empty canisters on mainnet
+dfx deploy --network=ic --no-wallet
